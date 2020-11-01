@@ -4,42 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 
     <script type="text/javascript" src="./script.js" defer></script>
+    <script src="https://kit.fontawesome.com/ea399319a5.js" crossorigin="anonymous"></script>
     <title>Calculadora</title>
 </head>
 <body>
-    <div id="container">
-        <div id="display">0</div>
+    <div class="animate-up" id="container">
+        <div id="display"></div>
         <div class="operacao-botoes" id="operacao">
             <div id="operacao1">
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button>/</button>
+                <input value="7" type="button" onclick="calculo(7)">
+                <input value="8" type="button" onclick="calculo(8)">
+                <input value="9" type="button" onclick="calculo(9)">
+                <input value="/" class="bold" type="button" onclick="calculo('/')">
             </div>
             <div id="operacao2">
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button>*</button>
+                <input value="4" type="button" onclick="calculo(4)">
+                <input value="5" type="button" onclick="calculo(5)">
+                <input value="6" type="button" onclick="calculo(6)">
+                <input value="*" class="bold" type="button" onclick="calculo('*')">
             </div>
             <div id="operacao3">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>-</button>
+                <input value="1" type="button" onclick="calculo(1)">
+                <input value="2" type="button" onclick="calculo(2)">
+                <input value="3" type="button" onclick="calculo(3)">
+                <input value="-" class="bold" type="button" onclick="calculo('-')">
             </div>
             <div id="operacao4">
-                <button>C</button>
-                <button>0</button>
-                <button>.</button>
-                <button>+</button>
+                <input value="C" class="limpa" type="button" onclick="reset()">
+                <input value="0" type="button" onclick="calculo(0)">
+                <input value="," type="button" onclick="calculo('.')">
+                <input value="+" class="bold" type="button" onclick="calculo('+')">
             </div>
             <div id="operacao5">
-                <button class="igual">=</button>
-                <button>backspace</button>
+                <input value="=" type="button" class="igual" onclick="resultado()">
+                <button class="botao-delete" onclick="deleta()"><i class="fas fa-backspace"></i></button>
             </div>
         </div>
     </div>

@@ -2,6 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
+    font-family: 'Montserrat', sans-serif
 }
 
 body {
@@ -13,10 +15,27 @@ body {
     width: 100vw;
 }
 
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 320px;
+    height: 450px;
+    
+    background-color: #d66060;
+    border-radius: 10px;
+    border: .5px solid rgba(0, 0, 0, .3);
+    box-shadow: 5px 5px 20px 5px #828282;
+}
+
 #display {
-    background-color: #e04949;
-    width: 50vw;
-    height: 7vh;
+    background-color: #e44141;
+    width: 252px;
+    height: 50px;
+    color: #F1F1F1;
+    font-weight: 500;
 
     margin-bottom: 4px; 
 
@@ -25,27 +44,80 @@ body {
     justify-content: center;
 
     border-radius: 5px;
+    border: 1px solid rgba(5, 5, 5, .3);
 }
 
-#container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
-    border: 2px solid red;
-    width: 60vw;
-    height: 70vh;
-}
-
-.operacao-botoes button {
-    width: 12vw;
-    height: 7vh;
+.operacao-botoes input {
+    width: 60px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 500;
 
     margin: 2px 0;
-    padding: 0;
+
+    border: none;
+    border-radius: 6px;
+    outline: none;
+}
+.operacao-botoes input:hover {
+    transition: .3s;
+    background-color: rgb(209, 209, 209);
+}
+.operacao-botoes input:active {
+    background-color: rgb(233, 156, 156);
 }
 
-#operacao5 .igual {
-    width: 37.35vw;
+input.igual {
+    width: 188px;
+    font-weight: bold;
+    background-color: #6dcbf0;
+}
+
+input.igual:hover {
+    background-color: #22b7f1;
+}
+
+input.limpa {
+    background-color: #f5be6d;
+}
+
+input.limpa:hover {
+    background-color: #f1aa3e;
+}
+
+input.bold {
+    font-weight: bold;
+    background-color: #d6d6d6;
+}
+
+input.bold:hover {
+    background-color: #b3b3b3;
+}
+
+.botao-delete {
+    width: 60px;
+    height: 40px;
+
+    margin: 2px 0;
+
+    border: none;
+    border-radius: 6px;
+    outline: none;
+}
+
+.animate-up {
+    animation-name: up;
+    animation-duration: .5s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    } to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
